@@ -1,2 +1,2 @@
 # grid-ex
-Just playing around with CSS-grid. This code probably won't even compile.
+Just playing around with CSS-grid.
