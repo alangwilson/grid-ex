@@ -1,0 +1,37 @@
+@media min-width: 304px {
+	sp_gutter = 16px;
+	sp_margin = 16px;
+}
+
+@media min-width: 768px {
+	sp_gutter = 24px;
+	sp_margin = 24px;
+}
+
+@media min-width: 1280px {
+	sp_gutter = 32px;
+	sp_margin = 32px;
+}
+
+@media min-width: 1800px {
+	sp_gutter = 40px;
+	sp_margin = 40px;
+}
+
+@media min-width: 2400px {
+	sp_gutter = 48px;
+	sp_margin = 48px;
+}
+
+.spectrum-grid {
+	display: grid;
+	grid-gap: sp_gutter;
+	IF spectrum-grid-variant = “full” AND @media max-width: 304px THEN
+		grid-template-columns: repeat(12, 8px);
+	ELSEIF spectrum-grid-variant = “full” AND @media min-width: 2400px THEN
+		grid-template-columns: repeat(12, 148px);
+	ELSE {spectrum-grid-variant = “standard” THEN
+		grid-template-columns: repeat(12, 1fr);
+	
+	margin: sp_margin;
+}
