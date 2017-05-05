@@ -1,37 +1,113 @@
+
 @media screen and (min-width: 304px) {
-	--sp_gutter: 16px;
-	--sp_margin: 16px;
+	:root {
+		--sp_gutter: 16px;
+		--sp_margin: 16px;
+	}
 }
 
 @media screen and (min-width: 768px) {
-	--sp_gutter: 24px;
-	--sp_margin: 24px;
+	:root {
+		--sp_gutter: 24px;
+		--sp_margin: 24px;
+	}
 }
 
 @media screen and (min-width: 1280px) {
-	--sp_gutter: 32px;
-	--sp_margin: 32px;
+	:root {
+		--sp_gutter: 32px;
+		--sp_margin: 32px;
+	}
 }
 
 @media screen and (min-width: 1800px) {
-	--sp_gutter: 40px;
-	--sp_margin: 40px;
+	:root {
+		--sp_gutter: 40px;
+		--sp_margin: 40px;
+	}
 }
 
 @media screen and (min-width: 2400px) {
-	--sp_gutter: 48px;
-	--sp_margin: 48px;
+	:root {
+		--sp_gutter: 48px;
+		--sp_margin: 48px;
+	}
 }
 
-.spectrum-grid {
+/* Baseline Grid */
+:root {
+	--sp_baseline: 16px;
+}
+
+body {
+	background-color: #f7f7f7;
+}
+
+.spectrum-grid,
+.spectrum-grid--fixed {
 	display: grid;
-	grid-gap: var(--sp_gutter);
+	grid-column-gap: var(--sp_gutter);
+	grid-row-gap: 0;
 	grid-template-columns: repeat(12, 1fr);
-	margin: 80px var(--sp_margin);
+	margin: 0;
+	padding: 0 var(--sp_margin);
+	grid-auto-rows: minmax(var(--sp_baseline), auto);
+	align-content: start;
 }
 
-.spectrum-grid > div{
-  border: 1px dashed rgb(127, 222, 255); 
-  padding: 10px;
-  background-color: rgb(127, 222, 255;
+.spectrum-grid--fixed {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.spectrum-grid > div:not(.grid-guide):not(.shell),
+.spectrum-grid--fixed > div:not(.grid-guide):not(.shell) {
+  border: 1px dashed rgb(127, 222, 255);
+  padding: var(--sp_baseline) 0;
+  background-color: #fff;
+}
+
+.shell {
+	grid-column: 1 / 13;
+	grid-row: 1;
+	margin-left: calc(var(--sp_gutter) * -1);
+	margin-right: calc(var(--sp_gutter) * -1);
+	padding: var(--sp_baseline);
+	background-color: #fff;
+	border: 1px dashed rgb(127, 222, 255);
+}
+
+.page-title {
+	grid-column: 1 / 7;
+	grid-row: 1;
+}
+
+.actions {
+	grid-column: 7 / 13;
+	grid-row: 1;
+}
+
+.search-filters {
+	grid-column: 1 / 7;
+	grid-row: 2;
+}
+
+.bulk-actions {
+	grid-column: 7 / 13;
+	grid-row: 2;
+}
+
+.table {
+	grid-column: 1 / 13;
+	grid-row: 3;
+	margin-left: calc(var(--sp_gutter) * -1);
+	margin-right: calc(var(--sp_gutter) * -1);
+	padding: var(--sp_baseline) !important;
+}
+
+@media screen and (min-width: 768px) {
+	.table {
+		margin: 0;
+		padding: var(--sp_baseline) 0 !important;
+	}
 }
