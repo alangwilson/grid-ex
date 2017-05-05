@@ -62,9 +62,11 @@ body {
 
 .spectrum-grid > div:not(.grid-guide):not(.shell),
 .spectrum-grid--fixed > div:not(.grid-guide):not(.shell) {
-  border: 1px dashed rgb(127, 222, 255);
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(0, 160, 255,.5);
   padding: var(--sp_baseline) 0;
-  background-color: #fff;
+  background-color: rgba(0,160,255,.25);
 }
 
 .shell {
@@ -73,8 +75,7 @@ body {
 	margin-left: calc(var(--sp_gutter) * -1);
 	margin-right: calc(var(--sp_gutter) * -1);
 	padding: var(--sp_baseline);
-	background-color: #fff;
-	border: 1px dashed rgb(127, 222, 255);
+	background-color: rgba(0,160,255,.25);
 }
 
 .page-title {
