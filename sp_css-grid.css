@@ -20,14 +20,14 @@
 	}
 }
 
-@media screen and (min-width: 1800px) {
+@media screen and (min-width: 1720px) {
 	:root {
 		--sp_gutter: 40px;
 		--sp_margin: 40px;
 	}
 }
 
-@media screen and (min-width: 2400px) {
+@media screen and (min-width: 2160px) {
 	:root {
 		--sp_gutter: 48px;
 		--sp_margin: 48px;
