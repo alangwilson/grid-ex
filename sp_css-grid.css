@@ -20,7 +20,7 @@
 	}
 }
 
-@media screen and (min-width: 1720px) {
+@media screen and (min-width: 1768px) {
 	:root {
 		--sp_gutter: 40px;
 		--sp_margin: 40px;
