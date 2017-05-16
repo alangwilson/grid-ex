@@ -82,12 +82,12 @@ body {
 }
 
 .page-title {
-	grid-column: 1 / 7;
+	grid-column: 1 / 8;
 	grid-row: 1;
 }
 
 .actions {
-	grid-column: 7 / 13;
+	grid-column: 8 / 13;
 	grid-row: 1;
 }
 
