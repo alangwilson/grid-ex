@@ -1,9 +1,8 @@
 /* Styling for sake of styles */
 
 .grid-guide {
-	grid-row: 1 / 10;
-	background-color: rgba(255, 0, 0, 0.05);
-	z-index: 200;
+	grid-row: 1 / 110;
+	background-color: rgba(255, 0, 0, 0.1);
 }
 
 .grid-guide:nth-of-type(1) {grid-column: 1;}
