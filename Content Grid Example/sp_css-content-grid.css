@@ -1,0 +1,40 @@
+@media screen and (min-width: 304px) {
+	:root {
+		--sp_gutter: 16px;
+		--sp_margin: 16px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	:root {
+		--sp_gutter: 24px;
+		--sp_margin: 24px;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	:root {
+		--sp_gutter: 32px;
+		--sp_margin: 32px;
+	}
+}
+
+body {
+	background-color: #f7f7f7;
+}
+
+.spectrum-grid--fixed {
+	display: grid;
+	grid-column-gap: var(--sp_gutter);
+	grid-template-columns: repeat(12, 1fr);
+	margin: 0;
+	padding: 0 var(--sp_margin);
+	grid-auto-rows: minmax(8px, max-content);
+	align-content: start;
+}
+
+.spectrum-grid--fixed {
+	max-width: 1280px;
+	margin: auto;
+	align-content: center;
+}

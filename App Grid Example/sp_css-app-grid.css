@@ -1,0 +1,67 @@
+
+@media screen and (min-width: 304px) {
+	:root {
+		--sp_gutter: 16px;
+		--sp_margin: 16px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	:root {
+		--sp_gutter: 24px;
+		--sp_margin: 24px;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	:root {
+		--sp_gutter: 32px;
+		--sp_margin: 32px;
+	}
+}
+
+@media screen and (min-width: 1768px) {
+	:root {
+		--sp_gutter: 40px;
+		--sp_margin: 40px;
+	}
+}
+
+@media screen and (min-width: 2160px) {
+	:root {
+		--sp_gutter: 48px;
+		--sp_margin: 48px;
+	}
+}
+
+/* Baseline Grid */
+:root {
+	--sp_baseline: 8px;
+}
+
+body {
+	background-color: #f7f7f7;
+}
+
+
+
+.spectrum-grid,
+.spectrum-grid--fixed {
+	display: grid;
+	grid-column-gap: var(--sp_gutter);
+	grid-row-gap: 0;
+	grid-template-columns: repeat(12, 1fr);
+	margin: 0;
+	padding: 0 var(--sp_margin);
+	grid-auto-rows: minmax(var(--sp_baseline), max-content);
+	align-content: start;
+}
+
+.spectrum-grid--fixed {
+	margin: 0 auto;
+}
+
+.spectrum-grid > div:not(.grid-guide):not(.shell),
+.spectrum-grid--fixed > div:not(.grid-guide):not(.shell) {
+  padding: var(--sp_baseline) 0;
+}
