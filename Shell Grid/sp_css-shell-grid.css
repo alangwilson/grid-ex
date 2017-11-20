@@ -1,0 +1,159 @@
+@media screen and (min-width: 304px) {
+	:root {
+		--sp_gutter: 16px;
+		--sp_margin: 16px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	:root {
+		--sp_gutter: 24px;
+		--sp_margin: 24px;
+	}
+}
+
+@media screen and (min-width: 1072px) {
+	:root {
+		--sp_gutter: 32px;
+		--sp_margin: 32px;
+	}
+}
+
+body {
+	background-color: #f7f7f7;
+}
+.spectrum-grid {
+	display: grid;
+	grid-column-gap: var(--sp_gutter);
+	grid-template-columns: repeat(12, 1fr);
+	margin: 0;
+	padding: 0 var(--sp_margin);
+	grid-auto-rows: minmax(8px, max-content);
+	align-content: start;
+}
+
+.spectrum-grid--fixed {
+	display: grid;
+	grid-column-gap: var(--sp_gutter);
+	grid-template-columns: repeat(12, 1fr);
+	margin: 0;
+	padding: 0 var(--sp_margin);
+	grid-auto-rows: minmax(8px, max-content);
+	align-content: start;
+}
+
+.spectrum-grid--fixed {
+	max-width: 1072px;
+	margin: auto;
+	align-content: center;
+}
+
+
+
+.shell-header {
+	grid-column: 1 / 13;
+	grid-row: 1 / 6 span;
+	margin-left: calc(var(--sp_margin) * -1);
+	margin-right: calc(var(--sp_margin) * -1);
+	padding: var(--sp_baseline);
+	background-color: rgba(0,160,255,.25);
+	color: rgb(0,160,255);
+}
+
+.ad-cloud {
+	grid-column: 1 / 4;
+	grid-row: 12 / 16 span;
+	background-color: rgba(55,165,255,.25);
+	color: rgb(55,165,255);
+	padding: var(--sp_baseline);
+}
+
+.marketing-cloud {
+	grid-column: 4 / 7;
+	grid-row: 12 / 16 span;
+	background-color: rgba(90,240,255,.3);
+	color: rgb(90,240,255);
+	padding: var(--sp_baseline);
+}
+
+.analytics-cloud {
+	grid-column: 7 / 10;
+	grid-row: 12 / 16 span;
+	background-color: rgba(170,240,100,.25);
+	color: rgb(170,240,100);
+	padding: var(--sp_baseline);
+}
+
+.platform {
+	grid-column: 10 / 13;
+	grid-row: 12 / 16 span;
+	background-color: rgba(190,0,255,.25);
+	color: rgb(190,0,255);
+	padding: var(--sp_baseline);
+}
+
+@media screen and (min-width: 1072px) {
+	.ad-cloud {
+	grid-column: 1 / 4;
+	grid-row: 12 / 16 span;
+	}
+
+	.marketing-cloud {
+	grid-column: 4 / 7;
+	grid-row: 12 / 16 span;
+	}
+
+	.analytics-cloud {
+	grid-column: 7 / 10;
+	grid-row: 12 / 16 span;
+	}
+
+	.platform {
+	grid-column: 10 / 13;
+	grid-row: 12 / 16 span;
+	}
+}
+
+@media screen and (max-width: 960px) {
+	.ad-cloud {
+	grid-column: 1 / 7;
+	grid-row: 12 / 16 span;
+	}
+
+	.marketing-cloud {
+	grid-column: 1 / 7;
+	grid-row: 18 / 22 span;
+	}
+
+	.analytics-cloud {
+	grid-column: 1 / 7;
+	grid-row: 24 / 28 span;
+	}
+
+	.platform {
+	grid-column: 7 / 13;
+	grid-row: 12 / 16 span;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.ad-cloud {
+	grid-column: 1 / 13;
+	grid-row: 12 / 16 span;
+	}
+
+	.marketing-cloud {
+	grid-column: 1 / 13;
+	grid-row: 18 / 22 span;
+	}
+
+	.analytics-cloud {
+	grid-column: 1 / 13;
+	grid-row: 24 / 28 span;
+	}
+
+	.platform {
+	grid-column: 1 / 13;
+	grid-row: 30 / 34 span;
+	}
+}
